@@ -39,6 +39,7 @@ const update = catchError(async (req, res) => {
   return res.json(result[1][0]);
 });
 
+// función para modificar los géneros de una película
 const setMovieGenres = catchError(async (req, res) => {
   const { id } = req.params;
   const movie = await Movie.findByPk(id);
@@ -49,6 +50,7 @@ const setMovieGenres = catchError(async (req, res) => {
   return res.json(genres);
 });
 
+// función para modificar los actores de una película
 const setMovieActors = catchError(async (req, res) => {
   const { id } = req.params;
   const movie = await Movie.findByPk(id);
@@ -59,6 +61,7 @@ const setMovieActors = catchError(async (req, res) => {
   return res.json(actores);
 });
 
+// función para modificar los directores de una película
 const setMovieDirectors = catchError(async (req, res) => {
   const { id } = req.params;
   const movie = await Movie.findByPk(id);
